@@ -9,9 +9,11 @@ import ppj.assignments.writer.Writer;
 @SpringBootApplication
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         SpringApplication app = new SpringApplication(Main.class);
+        // Nastaveni profilu programaticky
+        // app.setAdditionalProfiles("prod");
         ApplicationContext ctx = app.run(args);
 
         AppConfiguration cfg = ctx.getBean(AppConfiguration.class);
